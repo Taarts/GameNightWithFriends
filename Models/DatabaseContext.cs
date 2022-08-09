@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace GameNightWithFriends.Models
 {
+
     public partial class DatabaseContext : DbContext
     {
         // Change this if you want to have a different database name in development
@@ -13,6 +14,7 @@ namespace GameNightWithFriends.Models
         // Change this to true if you want to have logging of SQL statements in development
         private static bool LOG_SQL_STATEMENTS_IN_DEVELOPMENT = false;
 
+        public DbSet<GameNight> GameNights { get; set; }
         // Add database tables here
 
 
