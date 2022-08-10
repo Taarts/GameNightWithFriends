@@ -81,6 +81,7 @@ namespace GameNightWithFriends.Controllers
             {
                 return BadRequest();
             }
+            // Guard CLAUSE
             if (gameNight.MinimumPlayers < 2)
             {
                 var badRequestMessage = new { Message = "You need at least two players to participate." };
