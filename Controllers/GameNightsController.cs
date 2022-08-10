@@ -81,6 +81,11 @@ namespace GameNightWithFriends.Controllers
             {
                 return BadRequest();
             }
+            if (gameNight.MinimumPlayers < 2)
+            {
+                var badRequestMessage = new { Message = "You need at least two players to participate." };
+                return BadRequest(badRequestMessage);
+            }
 
             // Tell the database to consider everything in gameNight to be _updated_ values. When
             // the save happens the database will _replace_ the values in the database with the ones from gameNight
