@@ -130,6 +130,11 @@ namespace GameNightWithFriends.Controllers
         [HttpPost]
         public async Task<ActionResult<GameNight>> PostGameNight(GameNight gameNight)
         {
+            if (gameNight.MinimumPlayers < 2)
+            {
+                var badRequestMessage = new { Message = "You need at least two players to participate." };
+                return BadRequest(badRequestMessage);
+            }
             // Indicate to the database context we want to add this new record
             _context.GameNights.Add(gameNight);
             await _context.SaveChangesAsync();
