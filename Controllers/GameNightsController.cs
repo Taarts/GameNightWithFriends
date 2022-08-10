@@ -9,6 +9,7 @@ using GameNightWithFriends.Models;
 
 namespace GameNightWithFriends.Controllers
 {
+
     // All of these routes will be at the base URL:     /api/GameNights
     // That is what "api/[controller]" means below. It uses the name of the controller
     // in this case GameNightsController to determine the URL
