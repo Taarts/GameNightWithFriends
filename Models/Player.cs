@@ -1,7 +1,4 @@
 using System;
-using System.Text.RegularExpressions;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 namespace GameNightWithFriends.Models
 {
