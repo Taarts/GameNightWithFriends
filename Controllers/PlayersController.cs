@@ -17,7 +17,7 @@ namespace GameNightWithFriends.Controllers
     public class PlayersController : ControllerBase
     {
         // This is the variable you use to have access to your database
-        private readonly DatabaseContext _context; /* "_"... is read only*/
+        private readonly DatabaseContext _context;
 
         // Constructor that receives a reference to your database context
         // and stores it in _context for you to use in your API methods
@@ -80,6 +80,7 @@ namespace GameNightWithFriends.Controllers
             {
                 return BadRequest();
             }
+
             // Tell the database to consider everything in player to be _updated_ values. When
             // the save happens the database will _replace_ the values in the database with the ones from player
             _context.Entry(player).State = EntityState.Modified;
